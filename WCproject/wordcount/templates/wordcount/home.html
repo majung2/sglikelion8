@@ -1,0 +1,8 @@
+<h1>WORDCOUNT앱 입니다!</h1>
+
+<a href="{% url 'about' %}">about</a>
+<br>
+<form action="{% url 'result' %}">
+    <textarea name="fulltext" cols="40" rows="10"></textarea>
+    <input type="submit" value="count"/>
+</form>
