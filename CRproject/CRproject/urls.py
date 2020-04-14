@@ -1,4 +1,4 @@
-"""WCproject URL Configuration
+"""CRproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import wordcount.views
+from mydiary import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',wordcount.views.home,name="home"),
-    path('about/',wordcount.views.about,name="about"),
-    path('result/',wordcount.views.result,name="result"),
+    path('',views.home, name="home"),
+    path('new/',views.new, name="new"),
 ]
