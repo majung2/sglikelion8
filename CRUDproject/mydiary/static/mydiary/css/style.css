@@ -1,0 +1,72 @@
+@font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; }
+*{
+    font-family: 'Recipekorea', sans-serif;
+}
+.navbar-dark .navbar-toggler{
+    border:none !important;
+}
+button:focus{
+    outline:none !important;
+}
+#home-img1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/babylion.jpg);
+}
+#home-img2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/cutelion.jpg);
+    background-position: center 20%;
+}
+#home-img3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/sglikelion.jpg);
+}
+.home-img-display{
+    height: 90vh; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.home-caption-display{
+    top: 37%;
+    color: white;
+}
+.home-caption-display h1{
+    font-size: 4em;
+}
+.home-caption-display p{
+    font-size: 2.5em;
+}
+.posting-header{
+    padding: 120px 0;
+    text-align: center;
+}
+
+.posting-en{
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 3;
+}
+.posting-h{
+    font-size: 2.7em;
+    line-height: 1.5;
+}
+
+/* 밑에쓰기 */
+@media only screen and (max-width: 600px) {
+    .home-img-display{
+       height: 60vh;
+   } 
+    .home-caption-display{
+       top: 20%;
+   } 
+    .posting-header{
+       padding: 70px 0;
+   } 
+    .home-caption-display h1{
+       font-size: 2.7em;
+   } 
+    .home-caption-display p{
+       font-size: 1.6em;
+   } 
+    .posting-h{
+       font-size: 2em;
+   } 
+ }

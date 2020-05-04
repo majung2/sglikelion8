@@ -22,12 +22,12 @@ def new(request):
             form = ContentForm()
     return render(request, 'mydiary/new.html', {'form':form})
 
-def detail(request,index):
-    post=get_object_or_404(Content,pk=index)
+def detail(request,pk):
+    post=get_object_or_404(Content,pk=pk)
     return render(request, 'mydiary/detail.html', {'post':post})
 
-def edit(request,index):
-    post = get_object_or_404(Content, pk=index)
+def edit(request,pk):
+    post = get_object_or_404(Content, pk=pk)
     if request.method == 'POST':
         form = ContentForm(request.POST, instance=post)
         if form.is_valid():
@@ -35,7 +35,7 @@ def edit(request,index):
             post.author = request.user
             post.published_date = timezone.now
             post.save()
-            return redirect('detail', index=post.pk)
+            return redirect('detail', pk=post.pk)
     else:
         form = ContentForm(instance=post)
     return render(request, 'mydiary/edit.html', {'form':form})

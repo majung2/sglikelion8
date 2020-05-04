@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',mydiary.views.home, name="home"),
     path('new/',mydiary.views.new, name="new"),
-    path('detail/<int:index>',mydiary.views.detail, name="detail"),
-    path('edit/<int:index>', mydiary.views.edit, name="edit"),
+    path('detail/<int:pk>',mydiary.views.detail, name="detail"),
+    path('edit/<int:pk>', mydiary.views.edit, name="edit"),
     path('detail/<int:pk>/delete',mydiary.views.delete, name="delete"),
 ]
